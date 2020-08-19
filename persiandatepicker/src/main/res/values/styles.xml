@@ -4,9 +4,9 @@
     <style name="NumberPickerText">
         <item name="android:textSize">13sp</item>
     </style>
-//
+
     <!-- =================== Bottomsheet Style ============================= -->
-    <style name="AppTheme.fff" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="AppTheme.fff" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
                 <item name="bottomSheetStyle">@style/AppTheme.BottomSheet.Transparent</item>
         <item name="android:windowIsFloating">false</item>
         <item name="android:navigationBarColor">#E0E0E0</item>

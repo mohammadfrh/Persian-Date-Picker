@@ -45,6 +45,8 @@ public class PersianDatePickerDialog {
     private String submitButtonString = "ضبت";
     private String negativeButtonString = "انصراف";
     private Listener listener;
+    private Listener listener2;
+
     private int maxYear = 0;
     private int minYear = 0;
     private PersianCalendar initDate = new PersianCalendar();
@@ -78,6 +80,11 @@ public class PersianDatePickerDialog {
 
     public PersianDatePickerDialog setListener(Listener listener) {
         this.listener = listener;
+        return this;
+    }
+
+    public PersianDatePickerDialog setbuttonSubmitListener(Listener listener) {
+        this.listener2 = listener;
         return this;
     }
 
@@ -329,7 +336,7 @@ public class PersianDatePickerDialog {
         final AppCompatDialog dialog;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && showInBottomSheet) {
             dialog = new BottomSheetDialog(context,R.style.AppTheme_fff);
-//            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
             dialog.setContentView(v);
             container.setBackgroundColor(Color.TRANSPARENT);
@@ -365,6 +372,16 @@ public class PersianDatePickerDialog {
             }
         });
 
+        ButtonSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onDateSelected(datePicker.getDisplayPersianDate());
+                }
+                dialog.dismiss();
+            }
+        });
+
         todayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -391,6 +408,7 @@ public class PersianDatePickerDialog {
 
         dialog.show();
     }
+
 
     private void updateView(TextView dateText) {
         String date;

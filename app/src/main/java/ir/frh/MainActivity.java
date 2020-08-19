@@ -87,6 +87,18 @@ public class MainActivity extends AppCompatActivity {
                 .setPickerBackgroundDrawable(R.drawable.darkmode_bg)
                 .setTitleType(PersianDatePickerDialog.DAY_MONTH_YEAR)
                 .setCancelable(false)
+                .setbuttonSubmitListener(new Listener() {
+                    @Override
+                    public void onDateSelected(PersianCalendar persianCalendar) {
+                        Toast.makeText(MainActivity.this, persianCalendar.getPersianYear() + "/" + persianCalendar.getPersianMonth() + "/" + persianCalendar.getPersianDay(), Toast.LENGTH_SHORT).show();
+
+                    }
+
+                    @Override
+                    public void onDismissed() {
+
+                    }
+                })
                 .setListener(new Listener() {
                     @Override
                     public void onDateSelected(PersianCalendar persianCalendar) {
@@ -97,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onDismissed() {
 
                     }
+
                 });
         picker.show();
     }
