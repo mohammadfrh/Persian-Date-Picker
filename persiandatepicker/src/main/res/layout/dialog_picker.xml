@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layoutDirection="ltr"
     android:orientation="vertical"
-    android:background="#00424242"
+    android:background="@android:color/transparent"
     tools:ignore="RtlHardcoded,UnusedAttribute">
 
     <RelativeLayout

@@ -3,6 +3,7 @@ package ir.frh.persiandatepicker;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.util.Log;
 import android.view.View;
@@ -327,7 +328,9 @@ public class PersianDatePickerDialog {
 
         final AppCompatDialog dialog;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && showInBottomSheet) {
-            dialog = new BottomSheetDialog(context);
+            dialog = new BottomSheetDialog(context,R.style.AppTheme_fff);
+//            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
             dialog.setContentView(v);
             container.setBackgroundColor(Color.TRANSPARENT);
             dialog.setCancelable(cancelable);

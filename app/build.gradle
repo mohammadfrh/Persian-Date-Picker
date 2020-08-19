@@ -5,7 +5,7 @@ android {
     buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "ir.frh.persiandatepicker"
-        minSdkVersion 14
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -20,4 +20,5 @@ android {
 
 dependencies {
     implementation project(":persiandatepicker")
+    implementation "com.google.android.material:material:1.1.0"
 }
