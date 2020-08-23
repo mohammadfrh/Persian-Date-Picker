@@ -29,10 +29,6 @@ import java.util.Date;
 import ir.frh.persiandatepicker.util.PersianCalendar;
 import ir.frh.persiandatepicker.util.PersianHelper;
 
-/**
- * Created by aliabdolahi on 1/23/17.
- */
-
 public class PersianDatePickerDialog {
 
     public static final int THIS_YEAR = -1;
@@ -338,6 +334,7 @@ public class PersianDatePickerDialog {
             dialog = new BottomSheetDialog(context,R.style.AppTheme_fff);
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
+            dialog.getWindow().setStatusBarColor(Color.TRANSPARENT);
             dialog.setContentView(v);
             container.setBackgroundColor(Color.TRANSPARENT);
             dialog.setCancelable(cancelable);
