@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 .setLeavesBackgroundDrawable(R.drawable.ic_group_1290)
                 .setActionTextColor(Color.GRAY)
                 .setButtonSubmitColor(Color.WHITE)
-                .setTypeFace(typeface)
                 .setTitleType(PersianDatePickerDialog.WEEKDAY_DAY_MONTH_YEAR)
                 .setShowInBottomSheet(true)
                 .setListener(new Listener() {

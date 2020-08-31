@@ -3,6 +3,7 @@
 
     <style name="NumberPickerText">
         <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/iransans</item>
     </style>
 
     <!-- =================== Bottomsheet Style ============================= -->
