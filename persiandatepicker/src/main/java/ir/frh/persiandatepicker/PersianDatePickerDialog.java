@@ -50,8 +50,8 @@ public class PersianDatePickerDialog {
     public static Typeface typeFace;
     private String todayButtonString = "امروز";
     private boolean todayButtonVisibility = false;
-    private boolean buttonTodayDismissOk ;
-    private  boolean buttonSubmit;
+    private boolean buttonTodayDismissOk;
+    private boolean buttonSubmit;
     private int actionColor = Color.GRAY;
     private int submitColor = Color.WHITE;
     private int backgroundColor = Color.WHITE;
@@ -129,6 +129,7 @@ public class PersianDatePickerDialog {
         this.todayButtonString = todayButton;
         return this;
     }
+
     public PersianDatePickerDialog setButtonSubmitText(String todayButton) {
         this.submitButtonString = todayButton;
         return this;
@@ -216,13 +217,13 @@ public class PersianDatePickerDialog {
         return this;
     }
 
-    public PersianDatePickerDialog showTodayDismissOk(boolean b){
-        this.buttonTodayDismissOk=b;
+    public PersianDatePickerDialog showTodayDismissOk(boolean b) {
+        this.buttonTodayDismissOk = b;
         return this;
     }
 
-    public PersianDatePickerDialog showLinearSubmit(boolean b){
-        this.buttonSubmit=b;
+    public PersianDatePickerDialog showLinearSubmit(boolean b) {
+        this.buttonSubmit = b;
         return this;
     }
 
@@ -238,10 +239,10 @@ public class PersianDatePickerDialog {
         final AppCompatButton todayButton = v.findViewById(R.id.today_button);
         final RelativeLayout container = v.findViewById(R.id.container);
         final ImageView imageViewBackgroundLeaves = v.findViewById(R.id.imageView_background_leaves);
-        final LinearLayout linearTodayDismissOk= v.findViewById(R.id.linear_today_dismiss_ok);
-        final LinearLayout linearSubmit= v.findViewById(R.id.linear_submit);
-        final  AppCompatButton ButtonSubmit = v.findViewById(R.id.button_submit);
-        final  RelativeLayout backgroundDatePicker = v.findViewById(R.id.relativelayout_background_date_picker);
+        final LinearLayout linearTodayDismissOk = v.findViewById(R.id.linear_today_dismiss_ok);
+        final LinearLayout linearSubmit = v.findViewById(R.id.linear_submit);
+        final AppCompatButton ButtonSubmit = v.findViewById(R.id.button_submit);
+        final RelativeLayout backgroundDatePicker = v.findViewById(R.id.relativelayout_background_date_picker);
 
 
         imageViewBackgroundLeaves.setBackgroundResource(pickerLeavesBackgroundDrawable);
@@ -250,10 +251,10 @@ public class PersianDatePickerDialog {
         container.setBackgroundColor(backgroundColor);
         dateText.setTextColor(titleColor);
 
-        if(buttonTodayDismissOk){
+        if (buttonTodayDismissOk) {
             linearTodayDismissOk.setVisibility(View.VISIBLE);
         }
-        if(buttonSubmit){
+        if (buttonSubmit) {
             linearSubmit.setVisibility(View.VISIBLE);
         }
 
@@ -263,7 +264,7 @@ public class PersianDatePickerDialog {
             datePicker.setBackgroundDrawable(pickerBackgroundDrawable);
         }
 
-        if(backgroundDrawable!=0){
+        if (backgroundDrawable != 0) {
             backgroundDatePicker.setBackgroundResource(backgroundDrawable);
         }
 
@@ -298,6 +299,7 @@ public class PersianDatePickerDialog {
         if (typeFace != null) {
             dateText.setTypeface(typeFace);
             positiveButton.setTypeface(typeFace);
+            ButtonSubmit.setTypeface(typeFace);
             negativeButton.setTypeface(typeFace);
             todayButton.setTypeface(typeFace);
             datePicker.setTypeFace(typeFace);
@@ -331,7 +333,7 @@ public class PersianDatePickerDialog {
 
         final AppCompatDialog dialog;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && showInBottomSheet) {
-            dialog = new BottomSheetDialog(context,R.style.AppTheme_fff);
+            dialog = new BottomSheetDialog(context, R.style.AppTheme_fff);
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
             dialog.getWindow().setStatusBarColor(Color.TRANSPARENT);
