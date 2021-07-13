@@ -43,6 +43,10 @@ public class PersianDatePickerDialog {
     private Listener listener;
     private Listener listener2;
 
+    public boolean hideYear = false;
+    public boolean hideMonth = false;
+    public boolean hideDay = false;
+
     private int maxYear = 0;
     private int minYear = 0;
     private PersianCalendar initDate = new PersianCalendar();
@@ -52,6 +56,7 @@ public class PersianDatePickerDialog {
     private boolean todayButtonVisibility = false;
     private boolean buttonTodayDismissOk;
     private boolean buttonSubmit;
+
     private int actionColor = Color.GRAY;
     private int submitColor = Color.WHITE;
     private int backgroundColor = Color.WHITE;
@@ -227,6 +232,22 @@ public class PersianDatePickerDialog {
         return this;
     }
 
+    public PersianDatePickerDialog hideYear(boolean hideYear) {
+        this.hideYear = hideYear;
+        return this;
+    }
+
+    public PersianDatePickerDialog hideMonth(boolean hideMonth) {
+        this.hideMonth = hideMonth;
+        return this;
+    }
+
+    public PersianDatePickerDialog hideDay(boolean hideDay) {
+        this.hideDay = hideDay;
+        return this;
+    }
+
+
     public void show() {
 
         pCalendar = new PersianCalendar();
@@ -250,6 +271,17 @@ public class PersianDatePickerDialog {
 
         container.setBackgroundColor(backgroundColor);
         dateText.setTextColor(titleColor);
+
+        if (hideYear) {
+            v.findViewById(R.id.yearNumberPicker).setVisibility(View.GONE);
+        }
+        if (hideMonth) {
+            v.findViewById(R.id.monthNumberPicker).setVisibility(View.GONE);
+        }
+        if (hideDay) {
+            v.findViewById(R.id.dayNumberPicker).setVisibility(View.GONE);
+        }
+
 
         if (buttonTodayDismissOk) {
             linearTodayDismissOk.setVisibility(View.VISIBLE);

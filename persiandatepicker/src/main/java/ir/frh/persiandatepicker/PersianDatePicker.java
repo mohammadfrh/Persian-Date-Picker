@@ -49,6 +49,7 @@ class PersianDatePicker extends LinearLayout {
     private int yearRange;
     private int dividerSize;
 
+
     public PersianDatePicker(Context context) {
         this(context, null, -1);
     }
@@ -100,6 +101,8 @@ class PersianDatePicker extends LinearLayout {
         monthNumberPicker = view.findViewById(R.id.monthNumberPicker);
         dayNumberPicker = view.findViewById(R.id.dayNumberPicker);
         descriptionTextView = view.findViewById(R.id.descriptionTextView);
+
+
 
 
         yearNumberPicker.setFormatter(new NumberPicker.Formatter() {
