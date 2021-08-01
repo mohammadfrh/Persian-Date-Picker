@@ -46,6 +46,9 @@ public class PersianDatePickerDialog {
     public boolean hideYear = false;
     public boolean hideMonth = false;
     public boolean hideDay = false;
+    public boolean hidePreview = false;
+
+
 
     private int maxYear = 0;
     private int minYear = 0;
@@ -247,6 +250,10 @@ public class PersianDatePickerDialog {
         return this;
     }
 
+    public PersianDatePickerDialog hidePreview(boolean hidePreview) {
+        this.hidePreview = hidePreview;
+        return this;
+    }
 
     public void show() {
 
@@ -281,7 +288,9 @@ public class PersianDatePickerDialog {
         if (hideDay) {
             v.findViewById(R.id.dayNumberPicker).setVisibility(View.GONE);
         }
-
+        if (hidePreview) {
+            v.findViewById(R.id.dateText).setVisibility(View.GONE);
+        }
 
         if (buttonTodayDismissOk) {
             linearTodayDismissOk.setVisibility(View.VISIBLE);

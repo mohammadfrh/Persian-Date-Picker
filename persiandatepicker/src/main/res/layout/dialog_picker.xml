@@ -29,6 +29,7 @@
             android:layout_marginEnd="20dp"
             android:gravity="start"
             android:textSize="14sp"
+            android:visibility="gone"
             android:textStyle="bold"
             tools:text="سه شنبه"
             android:fontFamily="@font/iransans"
@@ -39,6 +40,7 @@
             android:id="@+id/relativelayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:layout_below="@+id/dateText">
 
             <ir.frh.persiandatepicker.PersianDatePicker
