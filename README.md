@@ -26,7 +26,7 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 dependencies {
-      implementation 'com.github.mohammadfrh:Persian-Date-Picker:0.1.8'
+      implementation 'com.github.mohammadfrh:Persian-Date-Picker:1.0.8'
 
 }
 ```
